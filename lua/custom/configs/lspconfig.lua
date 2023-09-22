@@ -8,6 +8,7 @@ local lsps = {
   "gopls",
   "terraformls",
   "helm_ls",
+  "jsonls",
 }
 
 for _, v in pairs(lsps) do
