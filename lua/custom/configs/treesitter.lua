@@ -1,5 +1,6 @@
 local opts = {
   ensure_installed = {
+    "lua",
     "go",
     "gosum",
     "gomod",
