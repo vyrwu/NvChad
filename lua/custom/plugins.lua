@@ -34,6 +34,10 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  {
+    "towolf/vim-helm",
+    lazy = false,
+  },
 }
 return plugins
 
