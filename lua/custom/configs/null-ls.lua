@@ -13,6 +13,7 @@ local sources = {
   b.formatting.textlint,
   b.formatting.trim_newlines,
   b.formatting.trim_whitespace,
+  b.formatting.yamlfmt,
 }
 
 null_ls.setup {

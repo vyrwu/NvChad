@@ -9,12 +9,12 @@ local lsps = {
   "terraformls",
   "helm_ls",
   "jsonls",
+  "yamlls",
 }
 
 for _, v in pairs(lsps) do
-
   if v == "gopls" then
-    lspconfig[v].setup({
+    lspconfig[v].setup {
       on_attach = on_attach,
       capabilities = capabilities,
       cmd = { "gopls" },
@@ -25,30 +25,29 @@ for _, v in pairs(lsps) do
           completeUnimported = true,
           usePlaceholders = true,
           analyses = {
-              unusedarams = true,
+            unusedarams = true,
           },
         },
       },
-    })
+    }
     goto continue
   end
 
   if v == "helm_ls" then
-    lspconfig[v].setup({
+    lspconfig[v].setup {
       on_attach = on_attach,
       capabilities = capabilities,
       cmd = { "helm_ls", "serve" },
       filetypes = { "helm" },
-      root_dir = util.root_pattern("Chart.yaml"),
-    })
+      root_dir = util.root_pattern "Chart.yaml",
+    }
     goto continue
   end
 
-  lspconfig[v].setup({
+  lspconfig[v].setup {
     on_attach = on_attach,
     capabilities = capabilities,
-  })
+  }
 
   ::continue::
 end
-
