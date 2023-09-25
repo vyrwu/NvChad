@@ -10,7 +10,7 @@ local sources = {
   b.formatting.golines,
   b.formatting.terraform_fmt,
   b.formatting.terrafmt,
-  b.formatting.textlint,
+  b.diagnostics.textlint,
   b.formatting.trim_newlines,
   b.formatting.trim_whitespace,
   b.formatting.yamlfmt,
