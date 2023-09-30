@@ -14,6 +14,7 @@ local sources = {
   b.formatting.trim_newlines,
   b.formatting.trim_whitespace,
   b.formatting.yamlfmt,
+  b.formatting.shfmt,
 }
 
 null_ls.setup {

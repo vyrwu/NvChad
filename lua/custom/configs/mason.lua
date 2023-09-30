@@ -1,6 +1,7 @@
 local opts = {
   ensure_installed = {
     "lua-language-server",
+    "stylua",
     "golangci-lint",
     "gopls",
     "terraform-ls",
@@ -9,7 +10,8 @@ local opts = {
     "yaml-language-server",
     "yamllint",
     "json-lsp",
-    "marksman" --markdown
+    "marksman", --markdown
+    "bash-language-server",
   },
 }
 

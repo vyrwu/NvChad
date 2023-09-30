@@ -10,6 +10,7 @@ local lsps = {
   "helm_ls",
   "jsonls",
   "yamlls",
+  "bashls",
 }
 
 for _, v in pairs(lsps) do

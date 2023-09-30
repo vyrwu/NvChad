@@ -8,6 +8,7 @@ local opts = {
     "terraform",
     "yaml",
     "json",
+    "bash",
   },
 }
 
