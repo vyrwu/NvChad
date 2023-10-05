@@ -10,7 +10,9 @@ local sources = {
   b.formatting.golines,
   b.formatting.terraform_fmt,
   b.formatting.terrafmt,
-  b.diagnostics.textlint,
+  b.diagnostics.textlint.with {
+    extra_args = { "--config", string.format("%s/.config/.textlintrc.json", os.getenv "HOME") },
+  },
   b.formatting.trim_newlines,
   b.formatting.trim_whitespace,
   b.formatting.yamlfmt,
