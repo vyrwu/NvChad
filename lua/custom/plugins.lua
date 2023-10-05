@@ -1,31 +1,31 @@
-local utils = require 'custom.utils'
+local utils = require "custom.utils"
 
 local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
-      local default_opts = require 'plugins.configs.treesitter'
-      local custom_opts = require 'custom.configs.treesitter'
+      local default_opts = require "plugins.configs.treesitter"
+      local custom_opts = require "custom.configs.treesitter"
       return utils.tableMerge(default_opts, custom_opts)
-    end
+    end,
   },
   {
     "williamboman/mason.nvim",
     opts = function()
-      local default_opts = require 'plugins.configs.mason'
-      local custom_opts = require 'custom.configs.mason'
+      local default_opts = require "plugins.configs.mason"
+      local custom_opts = require "custom.configs.mason"
       return utils.tableMerge(default_opts, custom_opts)
-    end
+    end,
   },
   {
     "kdheepak/lazygit.nvim",
-     -- optional for floating window border decoration
+    -- optional for floating window border decoration
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
     keys = function()
       return require "custom.configs.lazygit"
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
@@ -47,6 +47,25 @@ local plugins = {
     "towolf/vim-helm",
     lazy = false,
   },
-}
-return plugins
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    dependencies = {
+      { "tpope/vim-dadbod", lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+    },
+    cmd = {
+      "DBUIToggle",
+    },
+    keys = {
+      -- stylua: ignore
+      { "<leader>db", "<cmd>DBUIToggle<cr>", desc = "Toggle UI" },
+    },
 
+    init = function()
+      -- Your DBUI configuration
+      vim.g.db_ui_use_nerd_fonts = 1
+    end,
+  },
+}
+
+return plugins
