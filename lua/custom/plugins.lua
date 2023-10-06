@@ -66,6 +66,29 @@ local plugins = {
       vim.g.db_ui_use_nerd_fonts = 1
     end,
   },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require "custom.configs.noice"
+    end,
+    keys = {
+      -- stylua: ignore
+      { "<leader>fm", "<cmd>Noice telescope<cr>", desc = "Find Noice Message" },
+    },
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      local default_opts = require "plugins.configs.telescope"
+      local custom_opts = require "custom.configs.telescope"
+      return utils.tableMerge(default_opts, custom_opts)
+    end,
+  },
 }
 
 return plugins

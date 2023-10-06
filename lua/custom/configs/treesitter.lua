@@ -5,10 +5,12 @@ local opts = {
     "gosum",
     "gomod",
     "markdown",
+    "markdown_inline",
     "terraform",
     "yaml",
     "json",
     "bash",
+    "regex",
   },
 }
 
