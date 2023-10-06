@@ -1,6 +1,10 @@
-local opts = {
-  ensure_installed = {
-    "lua",
+return {
+  "nvim-treesitter/nvim-treesitter",
+  opts = function()
+    -- default NvChad opts
+    local opts = require "plugins.configs.treesitter"
+    opts.ensure_installed = {
+      "lua",
     "go",
     "gosum",
     "gomod",
@@ -11,7 +15,8 @@ local opts = {
     "json",
     "bash",
     "regex",
-  },
-}
+  }
 
-return opts
+    return opts
+  end,
+}
