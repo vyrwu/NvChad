@@ -1,5 +1,5 @@
 local config = function()
-  local default_on_attach = require("plugins.configs.lspconfig").on_attach
+  local   on_attach = require("plugins.configs.lspconfig").on_attach
   local capabilities = require("plugins.configs.lspconfig").capabilities
 
   local lspconfig = require "lspconfig"
@@ -15,11 +15,6 @@ local config = function()
   }
 
   for _, v in pairs(lsps) do
-    local on_attach = function(client)
-      default_on_attach(client)
-      client.resolved_capabilities.document_formatting = false
-    end
-
     if v == "gopls" then
       lspconfig[v].setup {
         on_attach = on_attach,
@@ -63,8 +58,6 @@ end
 return {
   "neovim/nvim-lspconfig",
   dependencies = {
-    -- format & linting
-    require "custom.configs.null-ls",
     -- helm_ls
     { "towolf/vim-helm", lazy = false },
   },

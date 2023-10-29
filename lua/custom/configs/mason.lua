@@ -16,7 +16,11 @@ return {
       "json-lsp",
       "marksman", --markdown
       "bash-language-server",
+      "eslint_d",
+      "pylint",
     }
+
+    opts.automatic_installation = true
 
     return opts
   end,

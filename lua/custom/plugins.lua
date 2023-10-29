@@ -7,7 +7,9 @@ local plugins = {
   require "custom.configs.lspconfig",
   require "custom.configs.dadbod-ui",
   require "custom.configs.noice",
-  require "custom.configs.telescope"
+  require "custom.configs.telescope",
+  require "custom.configs.conform",
+  require "custom.configs.nvim-lint",
 }
 
 return plugins
