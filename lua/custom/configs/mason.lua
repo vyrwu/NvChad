@@ -18,6 +18,14 @@ return {
       "bash-language-server",
       "eslint_d",
       "pylint",
+      "actionlint",
+      "black",
+      "codespell",
+      "gofumpt",
+      "goimports-reviser",
+      "golines",
+      "shfmt",
+      "prerrierd",
     }
 
     opts.automatic_installation = true
