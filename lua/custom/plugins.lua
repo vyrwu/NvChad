@@ -10,6 +10,7 @@ local plugins = {
   require "custom.configs.telescope",
   require "custom.configs.conform",
   require "custom.configs.nvim-lint",
+  require "custom.configs.vim-markdown",
 }
 
 return plugins
