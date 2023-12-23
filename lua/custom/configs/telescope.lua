@@ -16,6 +16,9 @@ return {
       find_files = {
         hidden = true,
       },
+      -- live_grep = {
+      --   hidden = true,
+      -- },
     }
 
     opts.extensions_list = { "themes", "terms", "fzf", "noice" }
