@@ -11,6 +11,7 @@ local plugins = {
   require "custom.configs.conform",
   require "custom.configs.nvim-lint",
   require "custom.configs.vim-markdown",
+  require "custom.configs.vim-visual-multi",
 }
 
 return plugins
