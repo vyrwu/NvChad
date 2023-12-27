@@ -18,7 +18,7 @@ return {
         markdown = { "prettierd" },
         lua = { "stylua" },
         python = { "black" },
-        go = { "gofumpt, golines, goimports_reviser" },
+        go = { "gofumpt", "golines", "goimports_reviser" },
         terraform = { "terraform_fmt" },
         ["terraform-vars"] = { "terraform_fmt" },
         bash = { "shfmt" },
