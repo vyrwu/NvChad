@@ -21,7 +21,12 @@ return {
       -- },
     }
 
-    opts.extensions_list = { "themes", "terms", "fzf", "noice" }
+    opts.extensions_list = {
+      "themes",
+      "terms",
+      "fzf",
+      --"noice"
+    }
     return opts
   end,
 }
